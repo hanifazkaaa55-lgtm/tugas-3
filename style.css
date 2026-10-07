@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #222;
+}
+
+.header {
+  text-align: center;
+  padding: 25px 20px;
+  background-color: #2563eb;
+  color: white;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 25px auto;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.controls input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.fav-toggle {
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.status {
+  text-align: center;
+  min-height: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(230px, 350px)
+  );
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #666;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card button,
+.close-btn,
+.favorite-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.detail-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.favorite-btn {
+  background-color: #f3f4f6;
+}
+
+.favorite-btn.active {
+  background-color: #fee2e2;
+}
+
+.close-btn {
+  background-color: #333;
+  color: white;
+  margin-top: 15px;
+}
+
+#detail-dialog {
+  width: 90%;
+  max-width: 650px;
+  border: none;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+#detail-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detail-list {
+  padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 94%;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls input {
+    width: 100%;
+  }
+
+}
